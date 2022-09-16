@@ -19,21 +19,41 @@ if someCondition {
 }
 ```
 
-# After
-An if conditional may be specified _after_ a function call.
+## After
+An if conditional may be specified _after_ a function call or an item in an array
+
+### Use in arrays
 
 ```
-do() if someCondition;
-```
-
-## Use in arrays and POJOs
-
-```
-// this can be used in arrays
 [1, 2 if someCondition, 3] // array will either be [1, 2, 3] or [1, 3]
-
-// and in POJOs
-{a: 1, b: 2 if condition, c: 3} // `b` will not be defined if condition is false
-// if you want the property to always be there, use a ternary
-{a: 1, b: condition ? 2 : 0, c: 3} // `b` will definitely be defined
 ```
+
+### Use in function calls
+
+```
+do() if condition;
+```
+
+### Exceptions
+
+If conditionals after are not supported for returns, as this confuses the reader. Early returns can be done with a traditional `if`
+
+```
+f foo (num: number) {
+	if num < 0 {
+		return;
+	}
+
+	// continue on ...
+}
+```
+
+## Ternary
+
+A ternary is a short-form of if/else with this syntax: `condition ? firstChoice : secondChoice`
+
+A ternary returns a value, therefore both choices must be the same type.
+
+### Nesting ternaries
+
+In the interest of readability, nested ternaries are not supported

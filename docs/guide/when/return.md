@@ -1,6 +1,6 @@
 # Return value of `when`
 
-The `when` structure always returns a value, which may be captured in a variable or returned.
+The `when` structure always returns a value, which may be used by assigning to a variable or returned.
 It is not required to use the return value, though.
 
 ```
@@ -24,12 +24,6 @@ f foo {
 
 ```
 when someNumber {
-	// call a function
-	1, 2 -> small(),
-
-	3..10 -> medium(),
-
-	// fallback function to call
-	... -> offTheCharts(),
+	1 -> small(), // call a function, ignore return value since there is no assignment
 }
 ```

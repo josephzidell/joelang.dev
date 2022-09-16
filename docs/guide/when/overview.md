@@ -42,18 +42,4 @@ when someNumber {
 	// fallback function to call
 	... -> offTheCharts(),
 }
-
-// if you need to do multiple things in a branch, wrap in braces
-when someNumber {
-	// call a function
-	1, 2 -> somethingSimple(),
-
-	3..10 -> {
-		doComplicatedThing1();
-		doComplicatedThing2();
-	},
-
-	// fallback function to call
-	... -> offTheCharts(),
-}
 ```
