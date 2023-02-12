@@ -41,11 +41,11 @@ my-app/
 ```
 // src/index.joe
 
-import foo from ./otherFile.joe; // look ma, no quotes
+import foo from ./otherFile.joe; // look ma, no quotes  ✅
 
-const robot = @/public/robots.txt; // valid path from the project root
+const robot = @/public/robots.txt; // valid path from the project root  ✅
 
-const publicDir = @/public/;
+const publicDir = @/public/;  ✅
 ```
 
 Here are some invalid scenarios
@@ -53,11 +53,11 @@ Here are some invalid scenarios
 ```
 // src/index.joe
 
-const robot = ../public/robots.txt;
+const robot = ../public/robots.txt;  ❌
 
-const kernelDir = /kernel/; // haha ... nope
+const kernelDir = /kernel/; // haha ... nope  ❌
 
-const whoops = ./aThirdFile.joe // file it doesn't exist
+const whoops = ./aThirdFile.joe // file it doesn't exist  ❌
 ```
 
 ## Windows / cross-OS

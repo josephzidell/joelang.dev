@@ -16,13 +16,13 @@ Arrays are defined with square brackets `[]` and may contain one type of data:
 ## Examples of valid arrays
 
 ```
-[1, -2, 3,456] // array of numbers, mind the spaces
-['foo', "bar"] // array of strings
-[true, true, false, true] // array of bools
-[@/file.joe, @/another/file.joe] // array of paths
-[/[a-z]/i, /[0-9]/g] // array of regexes
-[<"foo", 3.14, false>, <'bar', 900, true>] // array of tuples of shape <string, number, bool>
-[{a: 4, b: 'c'}] // array of objects of shape {a: number, b: string}
+[1, -2, 3,456] // array of numbers, mind the spaces  ✅
+['foo', "bar"] // array of strings  ✅
+[true, true, false, true] // array of bools  ✅
+[@/file.joe, @/another/file.joe] // array of paths  ✅
+[/[a-z]/i, /[0-9]/g] // array of regexes  ✅
+[<"foo", 3.14, false>, <'bar', 900, true>] // array of tuples of shape <string, number, bool>  ✅
+[{a: 4, b: 'c'}] // array of objects of shape {a: number, b: string}  ✅
 ```
 
 ## Assigning to a variable
@@ -31,13 +31,13 @@ When assigning to a variable, if the array has at least one item in it, joelang 
 
 ```
 // infer type is number[]
-const numbers = [1, 2];
+const numbers = [1, 2];  ✅
 
 // invalid since there are mixed types
-const numbers = [1, '2'];
+const numbers = [1, '2'];  ❌
 
 // instantiating an empty array
-let myArray: bool[] = [];
+let myArray: bool[] = [];  ✅
 ```
 
 ## Conditional items

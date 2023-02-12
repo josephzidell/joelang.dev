@@ -55,44 +55,56 @@ export default defineConfig({
 				items: [
 					{
 						text: 'Types',
-						link: '/guide/types/index',
 						items: [
+							{ text: 'Types Overview', link: '/guide/types/index' },
 							{ text: 'Number', link: '/guide/types/number' },
 							{ text: 'String', link: '/guide/types/string' },
 							{ text: 'Bool', link: '/guide/types/bool' },
 							{ text: 'Path', link: '/guide/types/path' },
 							{ text: 'Regular Expression (Regex)', link: '/guide/types/regex' },
 							{ text: 'Array', link: '/guide/types/array' },
-							{ text: 'Tuple', link: '/guide/types/tuple' },
+							// { text: 'Tuple', link: '/guide/types/tuple' },
 							{ text: 'Object (POJO)', link: '/guide/types/object' },
 							{ text: 'Type Inference', link: '/guide/types/inference' },
+						],
+					},
+					{
+						text: 'Control Flow',
+						items: [
+							{ text: 'Conditionals', link: '/guide/conditionals'},
+							{
+								text: 'When',
+								items: [
+									{ text: 'When Overview', link: '/guide/when/overview'},
+									{ text: 'Return', link: '/guide/when/return'},
+									{
+										text: 'Case',
+										items: [
+											{ text: 'Single Value', link: '/guide/when/case/single'},
+											{ text: 'Multiple Values', link: '/guide/when/case/multiple'},
+											{ text: 'Number Range', link: '/guide/when/case/range'},
+											{ text: 'Anything Else', link: '/guide/when/case/anything-else'},
+											{ text: 'Complex Case', link: '/guide/when/case/complex'},
+										],
+									},
+								],
+							},
 						],
 					},
 					{ text: 'Variables', link: '/guide/variables' },
 					{
 						text: 'Functions',
 						items: [
-							{ text: 'Overview', link: '/guide/functions/overview' },
+							{ text: 'Functions Overview', link: '/guide/functions/overview' },
 							{ text: 'Special Functions', link: '/guide/functions/special' },
 						],
 					},
-					{ text: 'Conditionals', link: '/guide/conditionals'},
 					{
-						text: 'When',
+						text: 'Classes',
 						items: [
-							{ text: 'Overview', link: '/guide/when/overview'},
-							{ text: 'Return', link: '/guide/when/return'},
-							{
-								text: 'Case',
-								items: [
-									{ text: 'Single Value', link: '/guide/when/case/single'},
-									{ text: 'Multiple Values', link: '/guide/when/case/multiple'},
-									{ text: 'Array of values', link: '/guide/when/case/array'},
-									{ text: 'Number Range', link: '/guide/when/case/range'},
-									{ text: 'Anything Else', link: '/guide/when/case/anything-else'},
-									{ text: 'Complex Case', link: '/guide/when/case/complex'},
-								],
-							},
+							{ text: 'Concrete Classes', link: '/guide/classes/concrete' },
+							{ text: 'Abstract Classes', link: '/guide/classes/abstract' },
+							{ text: 'Interfaces', link: '/guide/classes/interfaces' },
 						],
 					},
 				],

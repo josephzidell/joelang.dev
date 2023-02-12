@@ -17,35 +17,35 @@ Function names that end with a `!` indicate it throws an error. Note this works 
 
 ```
 // valid
-f danger! {
+f danger! {  ✅
 	throw Error if something bad happens;
 }
 
 // invalid because it does not throw an error
-f danger! {
+f danger! -> number {  ❌
 	return 4;
 }
 
 // invalid because the name does not end with a `!`
-f danger {
+f danger {  ❌
 	throw Error if something bad happens;
 }
 ```
 
 ## `?!`
 
-If a function returns a bool **and** throws an error, the `?` preceeds the `!`
+If a function returns a bool **and** throws an error, the `?` precedes the `!`
 
 ```
 // valid
-f isDone?! {
+f isDone?! -> bool {  ✅
 	throw Error if something bad happens;
 
 	return true;
 }
 
 // invalid
-f isDone!? {
+f isDone!? -> bool {  ❌
 	throw Error if something bad happens;
 
 	return true;

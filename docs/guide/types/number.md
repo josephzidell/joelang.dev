@@ -36,7 +36,8 @@ Ranges can go downward
 Some exceptions to ranges are floats. The example would not work
 
 ```
-1.0..4.0 // invalid since these contain decimals
+1 .. 4 // valid  ✅
+1.0 .. 4.0 // invalid since these contain decimals  ❌
 ```
 
 ## Array of numbers
@@ -47,7 +48,28 @@ An [`array`](array.md) of numbers is defined easily enough, but does have a gotc
 [1, 200] // array has 2 items
 ```
 
-If there is no space after the comma, the lexer will interpret the comma as part of the preceeding number and can cause unintended behavior.
+If there is no space after the comma, the lexer will interpret the comma as part of the preceding number and can cause unintended behavior.
 ```
 [1,200] // array has 1 item
+```
+
+## When using exponents
+
+When using an exponential number with a range or equality check, be sure to wrap your number in parens:
+
+```
+(1^e2) .. (3^e2)  ✅
+1^e2 .. 3^e2  ❌
+```
+
+This also applies when using comparators:
+
+```
+(1^e2) == (3^e2)  ✅
+1^e2 == 3^e2  ❌
+
+(1^e2) < (3^e2)  ✅
+1^e2 < 3^e2  ❌
+
+// etc ...
 ```

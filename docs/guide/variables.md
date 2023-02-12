@@ -9,9 +9,9 @@ Variable names that end with a `?` will be a bool, but the `?` is not necessary.
 
 ```
 // both of these are valid
-const isDone = true;
-const isDone? = true;
+const isDone = true;  ✅
+const isDone? = true;  ✅
 
 // this, however, is invalid
-const num? = 5;
+const num? = 5;  ❌
 ```

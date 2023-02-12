@@ -15,7 +15,7 @@ The following is valid joelang code:
 f foo {
 	// do();
 
-    return when someVar { /* ... */ };
+    return when someVar { /* ... */ };  ✅
 }
 
 ```
