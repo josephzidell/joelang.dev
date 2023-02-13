@@ -63,7 +63,7 @@ export default defineConfig({
 							{ text: 'Path', link: '/guide/types/path' },
 							{ text: 'Regular Expression (Regex)', link: '/guide/types/regex' },
 							{ text: 'Array', link: '/guide/types/array' },
-							// { text: 'Tuple', link: '/guide/types/tuple' },
+							{ text: 'Tuple', link: '/guide/types/tuple' },
 							{ text: 'Object (POJO)', link: '/guide/types/object' },
 							{ text: 'Type Inference', link: '/guide/types/inference' },
 						],

@@ -33,3 +33,21 @@ Alternatively, a [`ternary`](../conditionals.md#ternary) may be used
 	true
 >
 ```
+
+## Tuple Types
+
+Tuples can be used as types:
+
+```
+// variable declaration
+let foo: <bool, number>;
+
+// function parameter
+f foo (bar: <bool, number>) {}
+
+// return type
+f foo -> <bool, number> {}
+
+// array of tuples
+<bool, number>[]
+```
