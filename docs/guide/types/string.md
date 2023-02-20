@@ -9,3 +9,10 @@ Strings can use either single or double quotes.
 `'foo'`, `"foo"`
 
 Escaping works as expected: `'don\'t'`
+
+## Full Unicode Support
+
+```
+let greeting = '你好';
+let 你好 = 'greeting';
+```

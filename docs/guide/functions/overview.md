@@ -20,3 +20,10 @@ f myName -> string, number, etc. {};
 // assigning a function to a variable (no name, and notice the semicolon)
 const myName = f {...}; // usual things apply: args, return types, etc.
 ```
+
+## Full Unicode Support
+
+```
+// Square Root
+f √ (num: number) -> number {...}
+```
