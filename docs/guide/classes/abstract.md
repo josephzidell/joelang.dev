@@ -77,7 +77,7 @@ abstract class A { ... }
 class B extends A { ... }
 class C implements A { ... }
 
-new A();  ❌
-new B();  ✅
-new C();  ✅
+A.create();  ❌
+B.create();  ✅
+C.create();  ✅
 ```
