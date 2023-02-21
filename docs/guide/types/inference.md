@@ -9,7 +9,7 @@ const num = 3; // number
 const str = "hello"; // string
 const ary = ['foo', 'bar']; // array<string>
 const range = 1..10; // array<number> since it's a range. In joelang, ranges are always inclusive on both sides
-const tpl = <1, 'fun', 3.4, false, nil>; // tuple
+const tpl = <1, 'fun', 3.4, false>; // tuple
 const object = {a: 1, b: 2}; // object (POJO - Plain Ol' Joe Object)
 const myMethod = f {...} // function type (as opposed to a regular function `f myMethod {}`)
 ```
