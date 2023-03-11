@@ -66,6 +66,7 @@ export default defineConfig({
 							{ text: 'Tuple', link: '/guide/types/tuple' },
 							{ text: 'Object (POJO)', link: '/guide/types/object' },
 							{ text: 'Type Inference', link: '/guide/types/inference' },
+							{ text: 'Access', link: '/guide/types/access' },
 						],
 					},
 					{

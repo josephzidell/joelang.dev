@@ -15,6 +15,6 @@ Joelang has a rich array of types:
 
 ## Custom types
 
-You can create a custom type be defining a class.
+You can create a custom type by defining a class.
 
 > TODO: fill this in when classes are documented
