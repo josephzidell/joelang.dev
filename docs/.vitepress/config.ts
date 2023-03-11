@@ -43,7 +43,7 @@ export default defineConfig({
 		sidebar: [
 			{
 				text: 'Welcome',
-				collapsible: true,
+				collapsed: false,
 				items: [
 					{ text: 'Introduction', link: '/introduction' },
 					{ text: 'Getting Started', link: '/getting-started' },
@@ -51,10 +51,11 @@ export default defineConfig({
 			},
 			{
 				text: 'Guide',
-				collapsible: true,
+				collapsed: false,
 				items: [
 					{
 						text: 'Types',
+						collapsed: false,
 						items: [
 							{ text: 'Types Overview', link: '/guide/types/index' },
 							{ text: 'Number', link: '/guide/types/number' },
@@ -71,15 +72,18 @@ export default defineConfig({
 					},
 					{
 						text: 'Control Flow',
+						collapsed: true,
 						items: [
 							{ text: 'Conditionals', link: '/guide/conditionals'},
 							{
 								text: 'When',
+								collapsed: true,
 								items: [
 									{ text: 'When Overview', link: '/guide/when/overview'},
 									{ text: 'Return', link: '/guide/when/return'},
 									{
 										text: 'Case',
+										collapsed: true,
 										items: [
 											{ text: 'Single Value', link: '/guide/when/case/single'},
 											{ text: 'Multiple Values', link: '/guide/when/case/multiple'},
@@ -95,6 +99,7 @@ export default defineConfig({
 					{ text: 'Variables', link: '/guide/variables' },
 					{
 						text: 'Functions',
+						collapsed: true,
 						items: [
 							{ text: 'Functions Overview', link: '/guide/functions/overview' },
 							{ text: 'Special Functions', link: '/guide/functions/special' },
@@ -102,6 +107,7 @@ export default defineConfig({
 					},
 					{
 						text: 'Classes',
+						collapsed: true,
 						items: [
 							{ text: 'Concrete Classes', link: '/guide/classes/concrete' },
 							{ text: 'Abstract Classes', link: '/guide/classes/abstract' },
@@ -112,7 +118,7 @@ export default defineConfig({
 			},
 			{
 				text: 'Design',
-				collapsible: true,
+				collapsed: true,
 				items: [
 					{ text: 'Why?', link: '/why' },
 				],
