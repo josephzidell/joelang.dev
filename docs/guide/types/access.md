@@ -113,49 +113,53 @@ Ranges are not supported on Objects since they are not numerically indexed
 
 ```ts [Array (items)]
 // valid way to access range from an array
-arr[1..3]; // ['B', 'C', 'D']  ✅
+arr[1 .. 3]; // ['B', 'C', 'D']  ✅
 
 // using variables for range bounds
 const lower = 1;
 const upper = 3;
-arr[lower..upper] // ['B', 'C', 'D']  ✅
+arr[lower .. upper] // ['B', 'C', 'D']  ✅
 
 // invalid since the range is a variable
-const myRange = 1..3;
+const myRange = 1 .. 3;
 arr[myRange];  ❌
+arr[myRange.lower .. myRange.upper]  ✅
 ```
 
 ```ts [String (chars)]
 // valid way to access range from a string
-str[1..3]; // 'BCD'  ✅
+str[1 .. 3]; // 'BCD'  ✅
 
 // using variables for range bounds
 const lower = 1;
 const upper = 3;
-str[lower..upper] // 'BCD'  ✅
+str[lower .. upper] // 'BCD'  ✅
 
 // invalid since the range is a variable
-const myRange = 1..3;
+const myRange = 1 .. 3;
 str[myRange];  ❌
+str[myRange.lower .. myRange.upper]  ✅
 ```
 
 ```ts [Tuple (items)]
 // valid way to access range from a tuple
-tpl[1..3] // <'abc', true, 3.14>
+tpl[1 .. 3] // <'abc', true, 3.14>
 
 // using variables for range bounds
 const lower = 1;
 const upper = 3;
-tpl[lower..upper] // <'abc', true, 3.14>  ✅
+tpl[lower .. upper] // <'abc', true, 3.14>  ✅
 
 // invalid since the range is a variable
-const myRange = 1..3;
+const myRange = 1 .. 3;
 tpl[myRange];  ❌
+tpl[myRange.lower .. myRange.upper]  ✅
 ```
 :::
 
 ::: warning
-Range variables are not supported due to limitations of the parser.
+Range variables are not supported due to limitations of the parser. Instead of passing the range variable
+directly, pass the lower and upper bounds individually.
 :::
 
 ::: tip

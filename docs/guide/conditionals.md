@@ -25,7 +25,7 @@ An if conditional may be specified _after_ a function call or an item in an arra
 ### Use in arrays
 
 ```
-[1, 2 if someCondition, 3] // array will either be [1, 2, 3] or [1, 3]
+[1, 2 if someCondition, 3] // array will be either [1, 2, 3] or [1, 3]
 ```
 
 ### Use in function calls

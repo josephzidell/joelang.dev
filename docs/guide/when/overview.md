@@ -15,7 +15,7 @@ const size = when someNumber {
 	1, 2 -> 'small',
 
 	// between 3 and 10 (inclusive)
-	3..10 -> 'medium',
+	3 .. 10 -> 'medium',
 
 	// do stuff before, and use explicit return
 	11 -> {
@@ -37,7 +37,7 @@ when someNumber {
 	// call a function
 	1, 2 -> small(),
 
-	3..10 -> medium(),
+	3 .. 10 -> medium(),
 
 	// fallback function to call
 	... -> offTheCharts(),

@@ -15,7 +15,7 @@ Tuples may be nested in other tuples, and each one can have a different shape:
 	<1, 'pizza', 3.14>,
 	true,
 	@/some/file.joe,
-	1..3,
+	1 .. 3,
 	<1, 2, 'fizz', 4, 'buzz'>
 >
 ```

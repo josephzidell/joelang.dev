@@ -16,11 +16,8 @@ Here are some examples:
 Ranges can be easily created with 2 numbers, and are inclusive on both sides, always. If you want the last number be exclusive, substract one.
 
 ```
-const oneToThree = 1..3; // will generate a number array [1, 2, 3]
-```
-
-```
-1^e2..3^e2 // [1, 2, 3, 4, 5, 6, 7, 8, 9]
+1 .. 3;
+1^e2 .. 3^e2
 ```
 
 ### Ranging downward
@@ -28,7 +25,7 @@ const oneToThree = 1..3; // will generate a number array [1, 2, 3]
 Ranges can go downward
 
 ```
-5..-5 // [5, 4, 3, 2, 1, 0, -1, -2, -3, -4, -5]
+5 .. -5
 ```
 
 ### Some exceptions
