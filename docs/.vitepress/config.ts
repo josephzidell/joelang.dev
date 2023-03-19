@@ -116,6 +116,7 @@ export default defineConfig({
 							{ text: 'Interfaces', link: '/guide/classes/interfaces' },
 						],
 					},
+					{ text: 'Importing', link: '/guide/importing' },
 				],
 			},
 			{
