@@ -94,6 +94,7 @@ export default defineConfig({
 									},
 								],
 							},
+							{ text: 'For Loops', link: '/guide/for-loops' },
 						],
 					},
 					{ text: 'Variables', link: '/guide/variables' },
