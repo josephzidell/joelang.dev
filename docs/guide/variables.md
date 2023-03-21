@@ -15,3 +15,21 @@ const isDone? = true;  ✅
 // this, however, is invalid
 const num? = 5;  ❌
 ```
+
+## Multiple Variables
+
+```
+// declare and assign immediately
+const x, y = 0, 1;
+
+// assign multiple return types
+f getPoint -> number, number {}
+const x, y = getPoint();
+
+// declare then set later
+let x, y: number, number;
+x, y = getPoint();
+
+// class (or any object) properties
+this.x, this.y = getPoint();
+```
