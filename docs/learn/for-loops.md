@@ -25,4 +25,4 @@ for let i in ary[0 .. 4] {}
 
 To end the current iteration and go to the next, `next` (similar to `continue` in other langs).
 
-To end the entire loop, `done` (similar to `break` in other langs).
+To exit the entire loop, `done` (similar to `break` in other langs).

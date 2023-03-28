@@ -2,7 +2,7 @@
 
 ## Built-in types
 
-Joelang has a rich array of types:
+Joelang has a rich set of types:
 
 - [Arrays](array.md)
 - [Bools](bool.md)
@@ -17,4 +17,7 @@ Joelang has a rich array of types:
 
 You can create a custom type by defining a class.
 
-> TODO: fill this in when classes are documented
+```
+class Foo {}
+abstract class Bar {}
+```

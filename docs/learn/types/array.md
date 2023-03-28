@@ -16,7 +16,7 @@ Arrays are defined with square brackets `[]` and may contain one type of data:
 ## Examples of valid arrays
 
 ```
-[1, -2, 3,456] // array of numbers, mind the spaces  ✅
+[1, -2, 3_456] // array of numbers, mind the spaces  ✅
 ['foo', "bar"] // array of strings  ✅
 [true, true, false, true] // array of bools  ✅
 [@/file.joe, @/another/file.joe] // array of paths  ✅

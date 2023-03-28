@@ -4,6 +4,8 @@ Pattern matching is done with the `when` keyword and a variable.
 
 Each branch can be one or more values, a range or array of possible values, or `...` for anything else (similar to `default` in C-type languages)
 
+In joelang, `when` statements return a value.
+
 The types of each values must match the type of the conditional variable.
 The return type of each branch must be the same.
 

@@ -5,14 +5,14 @@ Many languages are verbose and difficult to read. The goal of joelang is for the
 
 Let's establish a few ground truths, which I think we can agree on:
 - Code is read far more often than it is written
-- Code maintenace is longer than the time it took to write the original version
+- Code maintenance is longer than the time it took to write the original version
 - Computing power is now cheaper than human time
 
 
 ## Solution
 [KISS](https://en.wikipedia.org/wiki/KISS_principle). Keep the syntax simple, and easy to read and understand.
 
-In reality, simplicity is hard. But we do the hard work so you can do the easy work.
+In reality, simplicity is hard. But we do the hard work so you can focus on what you are building.
 
 ## Comparison
 
@@ -52,7 +52,7 @@ In reality, simplicity is hard. But we do the hard work so you can do the easy w
 </tr>
 <tr><th colspan="3">Array / Object / String / Tuple access and splicing
 
-[read more...](guide/types/access.md)
+[read more...](learn/types/access.md)
 </th></tr>
 <tr><td>Get some items from array</td><td>
 

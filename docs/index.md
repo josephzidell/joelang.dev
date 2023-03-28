@@ -6,8 +6,8 @@ hero:
   text: A programming language focused on easy reading
   actions:
     - theme: brand
-      text: Getting Started
-      link: /getting-started
+      text: Get Started
+      link: /get-started
     - theme: alt
       text: Why?
       link: /why
