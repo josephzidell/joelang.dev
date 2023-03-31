@@ -4,7 +4,7 @@
 
 ```bash
 # compile a .joe file (ATM lexes, parses, and analyzes)
-./joec [filename].joe # outputs 3 files ([filename].tokens, [filename].parse-tree, [filename].ast.json)
+./joec [filename].joe # outputs 3 files (.build/[filename].tokens, .build/[filename].parse-tree, .build/[filename].ast.json)
 
 # play with the compiler, parser, or lexer
 ./joec -i '...' # run the compiler; will output the AST as objects
