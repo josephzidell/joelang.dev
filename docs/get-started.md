@@ -2,21 +2,52 @@
 
 ## Quick Start
 
+### Download
+
 ```bash
-# compile a .joe file (ATM lexes, parses, and analyzes)
-./joec [filename].joe # outputs 3 files (.build/[filename].tokens, .build/[filename].parse-tree, .build/[filename].ast.json)
+git clone https://github.com/josephzidell/joelang.git --branch main --single-branch
 
-# play with the compiler, parser, or lexer
-./joec -i '...' # run the compiler; will output the AST as objects
-./joec -i '...' --json # run the compiler; will output the AST as JSON
+cd joelang
 
-./joec -i '...' -p # parse only, do not analyze; will output the Parse Tree
+npm install
+```
 
-./joec -i '...' -l # (that's the lowercase L, not the number 1) lex only, do not parse; will console.table()'s the Tokens
+### Usage
+
+```bash
+# compile and run a .joe file
+./joec [filename].joe
+
+# read from stdin
+./joec -i '...'
+
+# debug
+./joec [filename].joe -d
+./joec -i '...' -d
+
+# lex only, do not parse; will output the Tokens
+# (that's the lowercase L, not the number 1)
+./joec ... -l
+
+# lex and parse, do not analyze; will output the Parse Tree
+./joec ... -p
+
+# lex, parse, and analyze; do not compile; will output the AST and Symbol Table
+./joec ... -a [--json]
 
 # run the tests
 npm test
 ```
+
+### Requirements
+
+To compile a joelang program, you'll need
+
+| Requirement | Version | Verify via |
+| --- | --- | --- |
+| [NPM](https://nodejs.org/en) | 18.x | `node -v` and `npm -v` |
+| [llvm](https://releases.llvm.org/) | 15.0.7 | `llc --version` |
+| [gcc](https://gcc.gnu.org/install/) | 12.2.0 | `gcc --version` |
 
 ## Included Examples
 
