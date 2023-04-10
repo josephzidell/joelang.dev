@@ -12,28 +12,30 @@ cd joelang
 npm install
 ```
 
+The `joec` binary is available by adding `joelang/.bin` to your PATH.
+
 ### Usage
 
 ```bash
 # compile and run a .joe file
-./joec [filename].joe
+joec [filename].joe
 
 # read from stdin
-./joec -i '...'
+joec -i '...'
 
 # debug
-./joec [filename].joe -d
-./joec -i '...' -d
+joec [filename].joe -d
+joec -i '...' -d
 
 # lex only, do not parse; will output the Tokens
 # (that's the lowercase L, not the number 1)
-./joec ... -l
+joec ... -l
 
 # lex and parse, do not analyze; will output the Parse Tree
-./joec ... -p
+joec ... -p
 
 # lex, parse, and analyze; do not compile; will output the AST and Symbol Table
-./joec ... -a [--json]
+joec ... -a [--json]
 
 # run the tests
 npm test
