@@ -2,6 +2,16 @@
 
 ## Quick Start
 
+### Requirements
+
+To compile a joelang program, you'll need
+
+| Requirement | Version | Verify via |
+| --- | --- | --- |
+| [NPM](https://nodejs.org/en) | 18.x | `node -v` and `npm -v` |
+| [llvm](https://releases.llvm.org/) | 15.0.7 | `llc --version` |
+| [gcc](https://gcc.gnu.org/install/) | 12.2.0 | `gcc --version` |
+
 ### Download
 
 ```bash
@@ -40,16 +50,6 @@ joec ... -a [--json]
 # run the tests
 npm test
 ```
-
-### Requirements
-
-To compile a joelang program, you'll need
-
-| Requirement | Version | Verify via |
-| --- | --- | --- |
-| [NPM](https://nodejs.org/en) | 18.x | `node -v` and `npm -v` |
-| [llvm](https://releases.llvm.org/) | 15.0.7 | `llc --version` |
-| [gcc](https://gcc.gnu.org/install/) | 12.2.0 | `gcc --version` |
 
 ## Included Examples
 
