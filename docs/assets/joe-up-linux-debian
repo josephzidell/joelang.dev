@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# Update package lists
+echo "Updating package lists..."
+sudo apt-get update
+
+# Install Node.js and npm
+echo "Installing Node.js and npm..."
+curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+# Install LLVM
+echo "Installing LLVM..."
+sudo apt-get install -y llvm
+
+# Verify installations
+echo "Verifying installations..."
+node -v
+npm -v
+llvm-config --version
+
+echo "All done!"

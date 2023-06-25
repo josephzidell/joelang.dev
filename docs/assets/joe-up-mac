@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# Check for Homebrew, install if we don't have it
+if test ! $(which brew); then
+    echo "Installing homebrew..."
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
+
+# Update Homebrew recipes
+echo "Updating Homebrew recipes..."
+brew update
+
+# Install Node.js and npm
+echo "Installing Node.js and npm..."
+brew install node
+
+# Install LLVM
+echo "Installing LLVM..."
+brew install llvm
+
+# Verify installations
+echo "Verifying installations..."
+node -v
+npm -v
+llvm-config --version
+
+echo "All done!"

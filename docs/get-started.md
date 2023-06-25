@@ -3,95 +3,94 @@
 ## Quick Start
 
 1. Install requirements
-::: details Requirements
-To compile a joelang program, you'll need
+	::: details Requirements
+	To compile a joelang program, you'll need
 
-| Requirement | Version | Verify via |
-| --- | --- | --- |
-| [Node.js & NPM](https://nodejs.org/en) | 18.x | `node -v` and `npm -v` |
-| [llvm](https://releases.llvm.org/) | 15.0.7 | `llc --version` |
-:::
+	| Requirement | Version | Verify via |
+	| --- | --- | --- |
+	| [Node.js & NPM](https://nodejs.org/en) | 18.x | `node -v` and `npm -v` |
+	| [llvm](https://releases.llvm.org/) | 15.0.7 | `llc --version` |
+	:::
 
-::: code-group
+	::: code-group
 
-```bash [Ubuntu/Debian]
-#!/bin/bash
+	```bash [Ubuntu/Debian]
+	#!/bin/bash
 
-# Update package lists
-echo "Updating package lists..."
-sudo apt-get update
+	# Update package lists
+	echo "Updating package lists..."
+	sudo apt-get update
 
-# Install Node.js and npm
-echo "Installing Node.js and npm..."
-curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash -
-sudo apt-get install -y nodejs
+	# Install Node.js and npm
+	echo "Installing Node.js and npm..."
+	curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+	sudo apt-get install -y nodejs
 
-# Install LLVM
-echo "Installing LLVM..."
-sudo apt-get install -y llvm
+	# Install LLVM
+	echo "Installing LLVM..."
+	sudo apt-get install -y llvm
 
-# Verify installations
-echo "Verifying installations..."
-node -v
-npm -v
-llvm-config --version
+	# Verify installations
+	echo "Verifying installations..."
+	node -v
+	npm -v
+	llvm-config --version
 
-echo "All done!"
-```
+	echo "All done!"
+	```
 
-```bash [Mac (via Homebrew)]
-#!/bin/bash
+	```bash [Mac (via Homebrew)]
+	#!/bin/bash
 
-# Check for Homebrew, install if we don't have it
-if test ! $(which brew); then
-	echo "Installing homebrew..."
-	ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-fi
+	# Check for Homebrew, install if we don't have it
+	if test ! $(which brew); then
+		echo "Installing homebrew..."
+		ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+	fi
 
-# Update Homebrew recipes
-echo "Updating Homebrew recipes..."
-brew update
+	# Update Homebrew recipes
+	echo "Updating Homebrew recipes..."
+	brew update
 
-# Install Node.js and npm
-echo "Installing Node.js and npm..."
-brew install node
+	# Install Node.js and npm
+	echo "Installing Node.js and npm..."
+	brew install node
 
-# Install LLVM
-echo "Installing LLVM..."
-brew install llvm
+	# Install LLVM
+	echo "Installing LLVM..."
+	brew install llvm
 
-# Verify installations
-echo "Verifying installations..."
-node -v
-npm -v
-llvm-config --version
+	# Verify installations
+	echo "Verifying installations..."
+	node -v
+	npm -v
+	llvm-config --version
 
-echo "All done!"
-```
+	echo "All done!"
+	```
 
-```ps1 [Windows (via PowerShell and Chocolatey)]
-# Install Chocolatey package manager
-Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+	```ps1 [Windows (via PowerShell and Chocolatey)]
+	# Install Chocolatey package manager
+	Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 
-# Install Node.js and npm
-choco install nodejs
+	# Install Node.js and npm
+	choco install nodejs
 
-# Install LLVM
-choco install llvm
+	# Install LLVM
+	choco install llvm
 
-# Verify installations
-node -v
-npm -v
-llvm-config --version
+	# Verify installations
+	node -v
+	npm -v
+	llvm-config --version
 
-Write-Output "All done!"
-```
+	Write-Output "All done!"
+	```
+	:::
 
-:::
+2. Download binary
 
-2. Download binaries
-
-https://github.com/josephzidell/joelang/releases
+	https://github.com/josephzidell/joelang/releases
 
 ### Usage
 
