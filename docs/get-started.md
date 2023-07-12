@@ -9,7 +9,7 @@
 	| Requirement | Version | Verify via |
 	| --- | --- | --- |
 	| [Node.js & NPM](https://nodejs.org/en) | 18.x | `node -v` and `npm -v` |
-	| [llvm](https://releases.llvm.org/) | 15.0.7 | `llvm-config --version` |
+	| [llvm](https://releases.llvm.org/) | 14.0.6 | `llvm-config --version` |
 	| [gcc](https://gcc.gnu.org/install/) | 12.2.0 | `gcc --version` |
 
 	::: code-group
