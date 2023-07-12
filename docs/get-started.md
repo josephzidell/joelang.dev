@@ -9,82 +9,25 @@
 	| Requirement | Version | Verify via |
 	| --- | --- | --- |
 	| [Node.js & NPM](https://nodejs.org/en) | 18.x | `node -v` and `npm -v` |
-	| [llvm](https://releases.llvm.org/) | 15.0.7 | `llc --version` |
-	:::
+	| [llvm](https://releases.llvm.org/) | 15.0.7 | `llvm-config --version` |
+	| [gcc](https://gcc.gnu.org/install/) | 12.2.0 | `gcc --version` |
 
 	::: code-group
 
 	```bash [Ubuntu/Debian]
-	#!/bin/bash
-
-	# Update package lists
-	echo "Updating package lists..."
-	sudo apt-get update
-
-	# Install Node.js and npm
-	echo "Installing Node.js and npm..."
-	curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash -
-	sudo apt-get install -y nodejs
-
-	# Install LLVM
-	echo "Installing LLVM..."
-	sudo apt-get install -y llvm
-
-	# Verify installations
-	echo "Verifying installations..."
-	node -v
-	npm -v
-	llvm-config --version
-
-	echo "All done!"
+	curl -sL https://deb.nodesource.com/setup_18.x | sudo bash
+	sudo apt-get install -y nodejs llvm gcc
 	```
 
 	```bash [Mac (via Homebrew)]
-	#!/bin/bash
-
-	# Check for Homebrew, install if we don't have it
-	if test ! $(which brew); then
-		echo "Installing homebrew..."
-		ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-	fi
-
-	# Update Homebrew recipes
-	echo "Updating Homebrew recipes..."
-	brew update
-
-	# Install Node.js and npm
-	echo "Installing Node.js and npm..."
-	brew install node
-
-	# Install LLVM
-	echo "Installing LLVM..."
-	brew install llvm
-
-	# Verify installations
-	echo "Verifying installations..."
-	node -v
-	npm -v
-	llvm-config --version
-
-	echo "All done!"
+	brew install node llvm gcc
 	```
 
 	```ps1 [Windows (via PowerShell and Chocolatey)]
 	# Install Chocolatey package manager
 	Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 
-	# Install Node.js and npm
-	choco install nodejs
-
-	# Install LLVM
-	choco install llvm
-
-	# Verify installations
-	node -v
-	npm -v
-	llvm-config --version
-
-	Write-Output "All done!"
+	choco install nodejs llvm mingw
 	```
 	:::
 
@@ -94,9 +37,18 @@
 
 ### Usage
 
+#### Compile a .joe file
+
 ```bash
-joec [filename].joe # compile and run a .joe file
-joec -i 'f main { print 42 }' # read from stdin
+joec main.joe # compile
+./main # run
+```
+
+#### Read from stdin
+Reading input from stdin will compile and run your code.
+
+```bash
+joec -i 'f main { print 42 }'
 ```
 
 ::: details Advanced Usage

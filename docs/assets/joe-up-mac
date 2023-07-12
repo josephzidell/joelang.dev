@@ -7,21 +7,16 @@ if test ! $(which brew); then
 fi
 
 # Update Homebrew recipes
-echo "Updating Homebrew recipes..."
 brew update
 
 # Install Node.js and npm
-echo "Installing Node.js and npm..."
 brew install node
 
 # Install LLVM
-echo "Installing LLVM..."
 brew install llvm
 
 # Verify installations
-echo "Verifying installations..."
 node -v
 npm -v
 llvm-config --version
-
-echo "All done!"
+gcc --version
