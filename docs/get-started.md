@@ -31,21 +31,28 @@
 	```
 	:::
 
-2. Download binary
+2. - Download binary https://github.com/josephzidell/joelang/releases
+     ::: tip
+     When downloading a binary file, you can rename it to `joec` which is what code snippets in the documentation use.
+     :::
 
-	https://github.com/josephzidell/joelang/releases
+   - Or [clone the repo](https://github.com/josephzidell/joelang), then `npm i` to install dependencies.
+     ::: tip
+     When cloning and running locally, `joec` in the code snippets can be replaced with `npm run joec` or `./.bin/joec`
+     :::
+
 
 ### Usage
 
-#### Compile a .joe file
-
+**Compile a `.joe` file**
 ```bash
 joec main.joe # compile
 ./main # run
 ```
 
-#### Read from stdin
-Reading input from stdin will compile and run your code.
+**Read from stdin**
+
+Reading input from stdin will compile and run your code without saving a binary file to disk.
 
 ```bash
 joec -i 'f main { print 42 }'
