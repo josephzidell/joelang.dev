@@ -8,7 +8,7 @@ choco upgrade all
 choco install nodejs
 
 # Install LLVM
-choco install llvm
+choco install llvm --version=14.0.6
 
 # Install GCC (via MinGW)
 choco install mingw

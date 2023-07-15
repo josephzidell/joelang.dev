@@ -9,25 +9,27 @@
 	| Requirement | Version | Verify via |
 	| --- | --- | --- |
 	| [Node.js & NPM](https://nodejs.org/en) | 18.x | `node -v` and `npm -v` |
-	| [llvm](https://releases.llvm.org/) | 14.0.6 | `llvm-config --version` |
+	| [clang](https://cmake.org/download/#latest) | 3.26.4 | `clang --version` |
+	| [llvm](https://releases.llvm.org/) | 14.0.6 | `llvm-config --version` or `llvm-config-14 --version` |
 	| [gcc](https://gcc.gnu.org/install/) | 12.2.0 | `gcc --version` |
 
 	::: code-group
 
 	```bash [Ubuntu/Debian]
 	curl -sL https://deb.nodesource.com/setup_18.x | sudo bash
-	sudo apt-get install -y nodejs llvm gcc
+	sudo apt install -y nodejs clang llvm-14 gcc
 	```
 
 	```bash [Mac (via Homebrew)]
-	brew install node llvm gcc
+	brew install node llvm@14 gcc
 	```
 
 	```ps1 [Windows (via PowerShell and Chocolatey)]
 	# Install Chocolatey package manager
 	Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 
-	choco install nodejs llvm mingw
+	choco install nodejs mingw
+	choco install llvm --version=14.0.6
 	```
 	:::
 

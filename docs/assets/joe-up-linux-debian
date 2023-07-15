@@ -1,17 +1,20 @@
 #!/bin/bash
 
 # Update package lists
-sudo apt-get update
+sudo apt update && sudo apt upgrade
 
 # Install Node.js and npm
 curl -sL https://deb.nodesource.com/setup_18.x | sudo bash
-sudo apt-get install -y nodejs
+sudo apt install -y nodejs
+
+# Install clang
+sudo apt install -y clang
 
 # Install LLVM
-sudo apt-get install -y llvm
+sudo apt install -y llvm-14
 
 # Install GCC
-sudo apt-get install -y gcc
+sudo apt install -y gcc
 
 # Verify installations
 node -v
