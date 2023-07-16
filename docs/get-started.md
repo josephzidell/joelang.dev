@@ -61,26 +61,31 @@ joec -i 'f main { print 42 }'
 ```
 
 ::: details Advanced Usage
+Advanced usage is available behind flags.
 
 ```bash
-# debug
+# debug mode on
 joec [filename].joe -d
 joec -i '...' -d
 
-# lex only, do not parse; will output the Tokens
+# stop after lexing, do not parse; will output the Tokens
 # (that's the lowercase L, not the number 1)
 joec ... -l
 
-# lex and parse, do not analyze; will output the Parse Tree
+# stop after parsing, do not analyze; will output the Parse Tree
 joec ... -p
 
-# lex, parse, and analyze; do not compile; will output the AST and Symbol Table
+# stop after analysis; do not compile; will output the AST and Symbol Table
 joec ... -a [--json]
 
 # run the tests
 npm test
 ```
 
+::: tip
+When running Joelang with `npm run joec`, remember to separate the flags with `--`.
+
+```npm run joec [filename.joe] -- <flags>```
 :::
 
 ## Included Examples
